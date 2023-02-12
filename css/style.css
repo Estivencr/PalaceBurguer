@@ -2,7 +2,9 @@
 
 :root{
     --red:#ff3838;
-
+    --bg:#fff;
+    --bgBody:#f7f7f7;
+    --colorText: #666;
 }
 
 *{
@@ -17,7 +19,7 @@
 
 *::selection{
     background: var(--red);
-    color: #fff;
+    color: var(--bg);
 }
 
 html{
@@ -28,7 +30,7 @@ html{
 }
 
 body{
-    background: #f7f7f7;
+    background: var(--bgBody);
 }
 
 section{
@@ -39,7 +41,7 @@ section{
     text-align: center;
     font-size: 3.5rem;
     padding: 1rem;
-    color: #666;
+    color: var(--colorText);
 }
 
 .heading span{
@@ -88,7 +90,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: var(--bg);
     padding: 2rem 9%;
     box-shadow: 0 .5;
 }
@@ -96,7 +98,7 @@ header{
 header .logo{
     font-size: 2.5rem;
     font-weight: bolder;
-    color: #666;
+    color: var(--colorText);
 
 }
 
@@ -108,7 +110,7 @@ header .logo i{
 header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
-    color: #666;
+    color: var(--colorText);
 }
 
 header .navbar a:hover{
@@ -118,7 +120,7 @@ header .navbar a:hover{
 #menu-bar{
     font-size: 3rem;
     cursor: pointer;
-    color: #666;
+    color: var(--colorText);
     border: .1rem solid #666;
     border-radius: .3rem;
     padding: .5rem 1.5rem;
@@ -171,7 +173,7 @@ header .navbar a:hover{
 
 .home .content p{
     font-size: 1.7rem;
-    color: #666;
+    color: var(--colorText);
     padding: 1rem 0;
 }
 
@@ -334,7 +336,7 @@ header .navbar a:hover{
 
 .gallery .box-container .box .content p{
     font-size: 1.5rem;
-    color: #666;
+    color: var(--colorText);
     padding: 1rem 0;
 }
 
@@ -443,6 +445,61 @@ header .navbar a:hover{
 .order .row form .btn:hover{
     background: var(--red);
 }
+
+.footer{
+    background: #000;
+    text-align: center;
+}
+
+.footer .heading{
+    color: #fff;
+}
+
+.footer .share{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer .contact{
+    padding: 1rem;
+    color: #fff;
+}
+
+.footer .contact .heading{
+    color: #fff;
+}
+
+.footer .credit{
+    padding: 2.5rem 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.footer .credit span{
+    color: var(--red);
+}
+
+#scroll-top{
+    position: fixed;
+    top: -120%;
+    right: 2rem;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background: var(--red);
+    color: #fff;
+    border-radius: .5rem;
+    transition: .7s linear;
+    z-index: 1000;
+}
+
+#scroll-top.active{
+    top: calc(100% - 12rem);
+}
+
+
 
 @media(max-width:991px){
 
